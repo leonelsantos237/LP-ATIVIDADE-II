@@ -8,37 +8,19 @@ int main()
 {
     setlocale(LC_ALL, "portuguese");
 
-    int num1, num2, calc, resultado;
+    int num, i, resultado;
 
-    printf("Digite um numero: ");
-    scanf("%d", &num1);
+    // Solicita ao usuário o número para a tabuada
+    printf("Digite um numero para calcular a tabuada: ");
+    scanf("%d", &num);
 
-    printf("Digite um numero: ");
-    scanf("%d", &num2);
-
-    printf("Digite a operação\n+ | 1\n- | 2\n* | 3\n");
-    scanf("%d", &calc);
-
-    switch (calc) 
+    // Imprime a tabuada de 1 a 10 do número fornecido
+    printf("Tabuada de %d:\n", num);
+    for (i = 1; i <= 10; i++) 
     {
-        case 1:
-            resultado = num1 + num2;
-            break;
-
-        case 2:
-            resultado = num1 - num2;
-            break;
-
-        case 3:
-            resultado = num1 * num2;
-            break;
-
-        default:
-            printf("Opcao invalida. \n");
-            break;
+        resultado = num * i;
+        printf("%d x %d = %d\n", num, i, resultado);
     }
-
-    printf("Resultado: %d", resultado);
 
     return 0;
 }
